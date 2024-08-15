@@ -1,12 +1,14 @@
 import streamlit as st
 import os
-import time
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
+import time
 from langchain_pinecone import PineconeVectorStore
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain.prompts import PromptTemplate
+from langchain.chains import  RetrievalQA
 from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
@@ -16,7 +18,7 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 class ChatBot():
     embeddings = HuggingFaceEmbeddings(model_name="xlm-roberta-base")
-    index_name = "docs-rag-chatbot"
+    index_name = "testing-rag-chatbot"
 
     # Initialize Pinecone with the API key from environment variables
     os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
