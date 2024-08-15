@@ -1,0 +1,6 @@
+streamlit
+langchain
+pinecone-client
+google-auth
+langchain-google-genai
+python-dotenv
