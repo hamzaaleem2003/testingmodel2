@@ -4,3 +4,5 @@ pinecone-client
 google-auth
 langchain-google-genai
 python-dotenv
+langchain-community
+langchain_pinecone
