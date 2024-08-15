@@ -1,8 +1,9 @@
 streamlit
 langchain
+langchain-community
 pinecone-client
+langchain_pinecone
 google-auth
 langchain-google-genai
 python-dotenv
-langchain-community
-langchain_pinecone
+sentence-transformers
