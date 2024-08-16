@@ -17,8 +17,8 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 class ChatBot():
-    embeddings = HuggingFaceEmbeddings(model_name="xlm-roberta-base")
-    index_name = "testing-rag-chatbot"
+    embeddings = HuggingFaceEmbeddings()
+    index_name = "docs-rag-chatbot"
 
     # Initialize Pinecone with the API key from environment variables
     os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
